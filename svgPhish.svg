@@ -1,0 +1,55 @@
+<svg width="500" height="300" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .background {
+            fill: #f0f0f0;
+        }
+        .login-box {
+            fill: #ffffff;
+            stroke: #cccccc;
+            stroke-width: 1;
+        }
+        .login-label {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            fill: #333333;
+        }
+        .input-field {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            fill: #000000;
+            stroke: #cccccc;
+            stroke-width: 1;
+        }
+        .login-button {
+            fill: #4CAF50;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    </style>
+
+    <!-- Background -->
+    <rect class="background" width="100%" height="100%"></rect>
+
+    <!-- Login Box -->
+    <rect class="login-box" x="100" y="70" width="300" height="160" rx="10"></rect>
+    
+    <!-- Labels -->
+    <text x="130" y="110" class="login-label">Username:</text>
+    <text x="130" y="150" class="login-label">Password:</text>
+    
+    <!-- Input Fields -->
+    <rect id="username-field" class="input-field" x="210" y="95" width="160" height="20" rx="5"></rect>
+    <rect id="password-field" class="input-field" x="210" y="135" width="160" height="20" rx="5"></rect>
+    
+    <!-- Login Button -->
+    <rect id="login-button" class="login-button" x="210" y="180" width="160" height="30" rx="5"></rect>
+    <text x="265" y="200" class="login-label" fill="#ffffff">Login</text>
+
+    <script type="text/javascript">
+        // Handle login button click
+        document.getElementById("login-button").addEventListener("click", function() {
+            alert("XSS by Matrix");
+        });
+    </script>
+</svg>
